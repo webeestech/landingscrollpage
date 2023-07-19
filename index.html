@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tommy Hilfiger</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="left-nav">
+            <a href="#">Brands</a>
+            <a href="#">Products</a>
+        </div>
+        <div class="right-nav">
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="logo-container">
+        <h1 class="logo">TOMMY <img class="thlogo" src="logo.png" alt="logo"> HILFIGER</h1>
+    </div>
+    <div class="container"></div>
+    <div class="hero">
+        <img src="model.png" alt="models image"/>
+    </div>
+    <script>
+
+        ScrollTrigger.create({
+            animation: gsap.from('.logo',{
+                y: '50vh',
+                scale: 6,
+                yPercent: -50
+            }),
+            scrub: true,
+            trigger: '.hero',
+            start: 'top bottom',
+            endTrigger: '.hero',
+            end: 'top center'
+        })
+
+    </script>
+</body>
+</html>
